@@ -1,0 +1,23 @@
+name: CI Pipeline
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    env:
+      CI: true
+  strategy:
+    matrix:
+      node-version: [ 18.x ]
+  runs-on: ubuntu-latest 
+  steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js version ${{ matrix.node-version}}
+      uses: action/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm start 
