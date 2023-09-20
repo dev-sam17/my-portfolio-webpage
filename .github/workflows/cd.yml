@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-  
+    # deploying on aws
     runs-on: self-hosted
 
     steps:
