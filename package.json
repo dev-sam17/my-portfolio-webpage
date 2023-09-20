@@ -2,12 +2,16 @@
   "name": "my-portfolio-webpage",
   "version": "1.0.0",
   "description": "this is my portfolio web page server.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dev-sam17/my-portfolio-webpage.git"
+  },
   "author": "Saurav Kumar",
-  "license": "ISC",
+  "license": "The MIT License (MIT)",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
